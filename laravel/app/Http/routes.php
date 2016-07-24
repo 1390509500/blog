@@ -22,7 +22,7 @@
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::get('/','AdminController@login');
+
 Route::group(['middleware' => ['web','admin']], function () {
     Route::get('home/index','HomeController@index');
     Route::get('home/info','HomeController@info');
